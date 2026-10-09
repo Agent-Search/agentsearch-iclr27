@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AgentSearch Workshop at ICLR 2027 - Constructing and Evaluating Agentic Solutions in Open Ecosystems. The second AgentSearch workshop, following AgentSearch at SIGIR 2026.">
+    <meta name="keywords" content="AI agents, ICLR, workshop, agent search, agent discovery, routing, orchestration, evaluation, mechanism design, agent security, open ecosystems">
+    <meta name="author" content="AgentSearch Workshop Organizers">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AgentSearch Workshop @ ICLR 2027">
+    <meta property="og:description" content="Constructing and Evaluating Agentic Solutions in Open Ecosystems">
+    <meta property="og:url" content="https://agent-search.github.io/agentsearch-iclr27/">
+    <meta property="og:image" content="https://agent-search.github.io/agentsearch-iclr27/assets/img/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AgentSearch Workshop @ ICLR 2027">
+    <meta name="twitter:description" content="Constructing and Evaluating Agentic Solutions in Open Ecosystems">
+
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+    <title>AgentSearch Workshop @ ICLR 2027</title>
+
+    <!-- Google Fonts (optional but lightweight) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <header class="header">
+        <nav class="nav" id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="#home">AgentSearch</a>
+                </div>
+
+                <!-- Hamburger Menu Button -->
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#topics" class="nav-link">Topics</a></li>
+                    <li><a href="#cfp" class="nav-link">CFP</a></li>
+                    <li><a href="#program" class="nav-link">Program</a></li>
+                    <li><a href="#speakers" class="nav-link">Speakers</a></li>
+                    <li><a href="#organizers" class="nav-link">Organizers</a></li>
+                    <li><a href="#previous" class="nav-link">SIGIR '26</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="section hero">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">AgentSearch</h1>
+                    <h2 class="hero-subtitle">Constructing and Evaluating Agentic Solutions in Open Ecosystems</h2>
+                    <p class="hero-conference">ICLR 2027 · San Francisco, USA · April 29 or 30, 2027 (TBD)</p>
+                    <!-- Update once the ICLR 2027 workshop decision is out (Nov 29, 2026) -->
+                    <p class="hero-note">The Second AgentSearch Workshop · Proposal under review</p>
+                    <div class="hero-buttons">
+                        <a href="#cfp" class="btn btn-primary" style="font-weight:700;">Call for Papers</a>
+                        <a href="https://agent-search.github.io/agentsearch-sigir26/" class="btn btn-secondary" style="font-weight:700;" target="_blank" rel="noopener noreferrer">1st Edition @ SIGIR 2026</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="section-content">
+                    <p>AI agents are changing how people access digital services and accomplish tasks. In open ecosystems, agents, tools, and skills from independent providers can be discovered and combined across provider boundaries. For both users seeking help with a task and orchestration systems acting on their behalf, the central question is <strong>which agentic solution to use or how to assemble one</strong>. Construction is difficult because components are heterogeneous, their descriptions may not reflect their capabilities for a given task, independent updates can invalidate earlier choices, and provider incentives may not align with users' objectives. Execution brings further challenges as solutions use task data and context and coordinate actions across providers, raising concerns about reliability, trust, and security.</p>
+                    <p>This workshop examines how agentic solutions can be <strong>discovered, composed, evaluated, and adapted</strong> under these conditions. It brings together research on agent and tool discovery, routing, orchestration, execution-grounded evaluation, and diagnosis, while incorporating economic perspectives on incentives and strategic interactions and security perspectives on trustworthy component selection and cross-provider execution. Building on the <a href="https://agent-search.github.io/agentsearch-sigir26/" target="_blank" rel="noopener noreferrer">AgentSearch workshop at SIGIR 2026</a>, it extends the focus from retrieving and ranking components to constructing and assessing agentic solutions in open ecosystems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="topics" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Topics of Interest</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <h3>Agent &amp; Tool Discovery, Selection, and Composition</h3>
+                        <ul>
+                            <li>Representation, profiling, and indexing of agent, tool, model, and skill capabilities</li>
+                            <li>Agent and tool retrieval, ranking, recommendation, and search</li>
+                            <li>Task-, constraint-, cost-, and reliability-aware component selection</li>
+                            <li>Model and agent routing, tool selection, and skill selection</li>
+                            <li>Multi-agent team formation, composition, and orchestration</li>
+                            <li>Agentic workflow construction and harness configuration</li>
+                            <li>Compatibility and collective suitability of heterogeneous components</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>Evaluation, Diagnosis, and Reliability of Agentic Solutions</h3>
+                        <ul>
+                            <li>Execution-grounded evaluation of agents, tools, skills, and composed systems</li>
+                            <li>Benchmarks, datasets, and evaluation protocols for agentic solutions</li>
+                            <li>Task success, efficiency, reliability, and robustness metrics</li>
+                            <li>Evaluation of multi-agent collaboration and component interactions</li>
+                            <li>Credit assignment, failure attribution, and diagnosis</li>
+                            <li>Trajectory-level and process-level evaluation</li>
+                            <li>Evaluation under distribution shifts and changing environments</li>
+                            <li>Trustworthiness and human-centered evaluation</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>Learning and Adaptation in Open Agent Ecosystems</h3>
+                        <ul>
+                            <li>Learning from execution feedback and interaction histories</li>
+                            <li>Adaptive agent and tool routing, selection, and orchestration</li>
+                            <li>Dynamic component replacement and workflow reconfiguration</li>
+                            <li>Continual adaptation to evolving agent capabilities and availability</li>
+                            <li>Optimization of agentic configurations and workflows</li>
+                            <li>Shared memory, experience reuse, and knowledge transfer across agents</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-card">
+                        <span class="topic-lens">Economic Lens</span>
+                        <h3>Economics of Agentic Systems and Market Mechanisms</h3>
+                        <ul>
+                            <li>Agentic marketplaces and market-based coordination</li>
+                            <li>Auctions, bidding, and pricing mechanisms for agent and task allocation</li>
+                            <li>Mechanism and incentive design for agent routing, ranking, cooperation, and resource sharing</li>
+                            <li>Compensation, attribution, and rewards for contributed agents, tools, skills, and artifacts</li>
+                            <li>Strategic behavior, competition, and collusion among agents</li>
+                            <li>Agent self-assessment of capabilities, costs, and resource requirements</li>
+                            <li>Automated and learning-based mechanism design</li>
+                            <li>Marketplace simulation and evaluation of welfare, fairness, and market dynamics</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-card">
+                        <span class="topic-lens">Security Lens</span>
+                        <h3>Security and Trust in Open Agent Ecosystems</h3>
+                        <ul>
+                            <li>Security of agent, tool, and skill discovery and selection</li>
+                            <li>Supply-chain attacks on agent registries and third-party components</li>
+                            <li>Adversarial manipulation of agent descriptions, rankings, and recommendations</li>
+                            <li>Prompt injection and attacks propagating across agents</li>
+                            <li>Poisoning of shared memory, trajectories, skills, and other artifacts</li>
+                            <li>Coordinated attacks, covert communication, and collusion among agents</li>
+                            <li>Provenance, verification, and access control for third-party components</li>
+                            <li>Secure agent composition, isolation, and permission management</li>
+                            <li>Red-teaming, threat modeling, and security benchmarks for agent ecosystems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call for Papers Section -->
+        <section id="cfp" class="section">
+            <div class="container">
+                <h2 class="section-title">Call for Papers</h2>
+                <div class="section-content">
+                    <p>The second AgentSearch workshop invites submissions describing original research findings, preliminary results, ongoing research, new methodologies, benchmarks, systems, and perspectives related to constructing and evaluating agentic solutions in open ecosystems. We particularly encourage work in progress and emerging research directions that can benefit from feedback and discussion within the workshop community.</p>
+
+                    <h3>Submission Types</h3>
+                    <ul class="challenge-list">
+                        <li><strong>Tiny / Short Papers</strong> (2–4 pages): preliminary findings, late-breaking results, focused empirical analyses, novel ideas, follow-up experiments, or perspectives on emerging research problems.</li>
+                        <li><strong>Research Papers</strong> (up to 8 pages): original research on methods, models, algorithms, theoretical foundations, empirical studies, or systems.</li>
+                        <li><strong>Perspective and Position Papers</strong> (4–8 pages): important open problems, new research directions, challenges to existing assumptions, or conceptual frameworks.</li>
+                        <li><strong>Benchmark, Dataset, and Demo Papers</strong> (4–8 pages): evaluation benchmarks, datasets, shared resources, software frameworks, or demonstrations of agentic systems and infrastructure.</li>
+                    </ul>
+                    <p>Page limits exclude references.</p>
+
+                    <h3>Submission Instructions</h3>
+                    <p>All submissions must be written in English and submitted as PDF files through OpenReview, following the official ICLR 2027 formatting guidelines. The submission template and OpenReview link will be announced on this website. All submissions undergo double-blind peer review and are evaluated on technical quality, originality, clarity, relevance to the workshop, and potential to stimulate discussion. At least one author of each accepted submission is expected to register for the workshop and present the work.</p>
+
+                    <h3>Non-Archival Policy</h3>
+                    <p>The workshop is non-archival. Accepted submissions will be made publicly available through OpenReview and linked from the workshop website, but will not constitute archival publications. Authors may further develop their work and submit it to archival venues, subject to the policies of those venues.</p>
+
+                    <div class="challenge-timeline">
+                        <h3>Important Dates (Tentative)</h3>
+                        <p>All deadlines are at 11:59 PM Anywhere on Earth (AoE).</p>
+                        <ul class="dates-list">
+                            <li><strong>Call for Papers Released:</strong> December 7, 2026</li>
+                            <li><strong>Paper Submission Deadline:</strong> February 1, 2027</li>
+                            <li><strong>Notification of Acceptance:</strong> February 24, 2027</li>
+                            <li><strong>Camera-Ready Deadline:</strong> March 12, 2027</li>
+                            <li><strong>Workshop Date:</strong> April 29 or 30, 2027 (TBD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Section -->
+        <section id="program" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Tentative Program</h2>
+                <div class="section-content">
+                    <p class="program-note">The workshop is a full-day, in-person event featuring invited talks, oral presentations, a panel discussion, breakout sessions, and an interactive poster session.</p>
+
+                    <div class="schedule-wrapper">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Agenda</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09.00 - 09.10</td>
+                                    <td><strong>Opening</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>09.10 - 09.40</td>
+                                    <td><strong>Invited Talk 1</strong><br>25 min talk + 5 min Q&amp;A</td>
+                                </tr>
+                                <tr>
+                                    <td>09.40 - 10.10</td>
+                                    <td><strong>Invited Talk 2</strong><br>25 min talk + 5 min Q&amp;A</td>
+                                </tr>
+                                <tr>
+                                    <td>10.10 - 10.30</td>
+                                    <td><strong>Oral Presentations</strong><br>Selected workshop papers</td>
+                                </tr>
+                                <tr>
+                                    <td>10.30 - 11.00</td>
+                                    <td>Coffee Break</td>
+                                </tr>
+                                <tr>
+                                    <td>11.00 - 11.30</td>
+                                    <td><strong>Invited Talk 3</strong><br>25 min talk + 5 min Q&amp;A</td>
+                                </tr>
+                                <tr>
+                                    <td>11.30 - 12.00</td>
+                                    <td><strong>Invited Talk 4</strong><br>25 min talk + 5 min Q&amp;A</td>
+                                </tr>
+                                <tr>
+                                    <td>12.00 - 12.30</td>
+                                    <td><strong>Oral Presentations</strong><br>Selected workshop papers</td>
+                                </tr>
+                                <tr>
+                                    <td>12.30 - 13.30</td>
+                                    <td>Lunch Break</td>
+                                </tr>
+                                <tr>
+                                    <td>13.30 - 14.00</td>
+                                    <td><strong>Invited Talk 5</strong><br>25 min talk + 5 min Q&amp;A</td>
+                                </tr>
+                                <tr>
+                                    <td>14.00 - 15.00</td>
+                                    <td><strong>Panel Discussion</strong><br><span class="talk-title">The Future of Open Ecosystems: What Infrastructure Do We Need?</span></td>
+                                </tr>
+                                <tr>
+                                    <td>15.00 - 15.30</td>
+                                    <td>Coffee Break</td>
+                                </tr>
+                                <tr>
+                                    <td>15.30 - 16.15</td>
+                                    <td><strong>Breakout Sessions</strong><br>Small-group discussions on focused research topics</td>
+                                </tr>
+                                <tr>
+                                    <td>16.15 - 17.00</td>
+                                    <td><strong>Poster Presentations</strong><br>Interactive poster session</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section id="speakers" class="section">
+            <div class="container">
+                <h2 class="section-title">Invited Speakers</h2>
+                <!-- Photos: add to assets/img/speakers/ and replace placeholder.svg in the img src -->
+                <div class="speaker-section">
+                    <div class="speakers-grid">
+                        <div class="speaker-card">
+                            <img src="assets/img/placeholder.svg" alt="Heng Ji" class="speaker-photo">
+                            <div class="speaker-info">
+                                <h3><a href="https://blender.cs.illinois.edu/hengji.html" target="_blank" rel="noopener noreferrer">Heng Ji</a></h3>
+                                <p class="speaker-affiliation">University of Illinois Urbana-Champaign</p>
+                                <p class="speaker-bio">Heng Ji is a Professor at the University of Illinois Urbana-Champaign. Her research focuses on natural language processing, information extraction, knowledge representation, and knowledge-enhanced language models. Her expertise brings perspectives on representing agent capabilities, leveraging structured knowledge, and constructing reliable agentic solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="speaker-card">
+                            <img src="assets/img/placeholder.svg" alt="Tuomas Sandholm" class="speaker-photo">
+                            <div class="speaker-info">
+                                <h3><a href="https://www.cs.cmu.edu/~sandholm/" target="_blank" rel="noopener noreferrer">Tuomas Sandholm</a></h3>
+                                <p class="speaker-affiliation">Carnegie Mellon University</p>
+                                <p class="speaker-bio">Tuomas Sandholm is a Professor at Carnegie Mellon University. His research spans computational game theory, multi-agent systems, auctions, and automated mechanism design. He brings an economic perspective on incentive alignment, strategic interactions, and resource allocation among independently operated agents and service providers.</p>
+                            </div>
+                        </div>
+
+                        <div class="speaker-card">
+                            <img src="assets/img/placeholder.svg" alt="Peter Stone" class="speaker-photo">
+                            <div class="speaker-info">
+                                <h3><a href="https://www.cs.utexas.edu/~pstone/" target="_blank" rel="noopener noreferrer">Peter Stone</a></h3>
+                                <p class="speaker-affiliation">University of Texas at Austin</p>
+                                <p class="speaker-bio">Peter Stone is a Professor at the University of Texas at Austin. His research focuses on reinforcement learning, multi-agent systems, and autonomous decision-making. He brings expertise in reinforcement learning for agentic systems, particularly on learning effective agent behaviors, coordination, and adaptation through interaction and experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="speaker-card">
+                            <img src="assets/img/placeholder.svg" alt="Katia Sycara" class="speaker-photo">
+                            <div class="speaker-info">
+                                <h3><a href="https://www.ri.cmu.edu/ri-faculty/katia-sycara/" target="_blank" rel="noopener noreferrer">Katia Sycara</a></h3>
+                                <p class="speaker-affiliation">Carnegie Mellon University</p>
+                                <p class="speaker-bio">Katia Sycara is a Professor at Carnegie Mellon University. Her pioneering research spans multi-agent systems, agent discovery, and coordination among autonomous agents. Her foundational work on agent discovery and matchmaking provides perspectives on identifying and selecting suitable agents, connected to the construction of agentic solutions through multi-agent collaboration.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="speakers-note">More speakers and panelists to be announced.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizers Section -->
+        <section id="organizers" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Organizers</h2>
+                <div class="organizers-grid">
+                    <div class="organizer-card">
+                        <a href="https://bingo-w.github.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/bin-wu.jpg" alt="Bin Wu" class="organizer-photo">
+                            <h3>Bin Wu</h3>
+                            <p class="organizer-affiliation">University College London</p>
+                        </a>
+                    </div>
+                    <div class="organizer-card">
+                        <a href="https://kimdanny.github.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/toeun-kim.jpeg" alt="To Eun Kim" class="organizer-photo">
+                            <h3>To Eun Kim</h3>
+                            <p class="organizer-affiliation">Carnegie Mellon University</p>
+                        </a>
+                    </div>
+                    <div class="organizer-card">
+                        <a href="https://stefanos.cc/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/placeholder.svg" alt="Stefanos Laskaridis" class="organizer-photo">
+                            <h3>Stefanos Laskaridis</h3>
+                            <p class="organizer-affiliation">Amazon Science</p>
+                        </a>
+                    </div>
+                    <div class="organizer-card">
+                        <a href="https://renzhaochun.github.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/zhaochun-ren.jpeg" alt="Zhaochun Ren" class="organizer-photo">
+                            <h3>Zhaochun Ren</h3>
+                            <p class="organizer-affiliation">Leiden University</p>
+                        </a>
+                    </div>
+                    <div class="organizer-card">
+                        <a href="https://staff.fnwi.uva.nl/e.kanoulas/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/placeholder.svg" alt="Evangelos Kanoulas" class="organizer-photo">
+                            <h3>Evangelos Kanoulas</h3>
+                            <p class="organizer-affiliation">University of Amsterdam</p>
+                        </a>
+                    </div>
+                    <div class="organizer-card">
+                        <a href="https://841.io/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/fernando-diaz.jpg" alt="Fernando Diaz" class="organizer-photo">
+                            <h3>Fernando Diaz</h3>
+                            <p class="organizer-affiliation">Carnegie Mellon University</p>
+                        </a>
+                    </div>
+                    <div class="organizer-card">
+                        <a href="https://sites.google.com/site/emineyilmaz/" target="_blank" rel="noopener noreferrer" class="organizer-link">
+                            <img src="assets/img/organizers/emine-yilmaz.jpg" alt="Emine Yilmaz" class="organizer-photo">
+                            <h3>Emine Yilmaz</h3>
+                            <p class="organizer-affiliation">University College London &amp; Amazon</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Previous Edition Section -->
+        <section id="previous" class="section">
+            <div class="container">
+                <h2 class="section-title">Previous Edition: AgentSearch @ SIGIR 2026</h2>
+                <div class="section-content">
+                    <p>The first AgentSearch workshop, <strong>The First Workshop on Indexing, Retrieval, and Ranking of AI Agents</strong>, was held at SIGIR 2026 in Melbourne | Naarm, Australia, on July 24, 2026. It framed agent search as a first-class information retrieval problem and focused on the discovery, retrieval, and ranking of individual agents and tools. The ICLR 2027 edition broadens this scope to constructing and evaluating complete agentic solutions in open ecosystems.</p>
+                    <div class="challenge-timeline">
+                        <h3>Highlights</h3>
+                        <ul class="dates-list">
+                            <li><strong>Accepted Papers:</strong> 11 workshop papers on agent retrieval, routing, evaluation, and governance</li>
+                            <li><strong>Program:</strong> keynotes, invited talks, oral and poster presentations, and a panel discussion</li>
+                            <li><strong>AgentSearch Challenge:</strong> retrieval and reranking over nearly 10,000 real-world agents, with labels derived from execution traces</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-button-wrapper">
+                        <a href="https://agent-search.github.io/agentsearch-sigir26/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit the SIGIR 2026 Workshop</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-content contact-content">
+                    <p>For questions, suggestions, or more information about the workshop, please contact us:</p>
+                    <!-- TODO: add the contact email for the ICLR 2027 edition
+                    <p class="contact-email">
+                        <strong>Email:</strong> <a href="mailto:EMAIL">EMAIL</a>
+                    </p>
+                    -->
+                    <div class="social-links">
+                        <a href="https://x.com/AgentSearchIR" target="_blank" rel="noopener noreferrer" aria-label="Twitter">X(Twitter)</a>
+                        <span class="separator">·</span>
+                        <a href="https://github.com/Agent-Search" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                        <span class="separator">·</span>
+                        <a href="https://bsky.app/profile/agentsearch.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">Bluesky</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AgentSearch Workshop. Proposed workshop at ICLR 2027.</p>
+            <p class="footer-update">Last updated: October 9, 2026</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
